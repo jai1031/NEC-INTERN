@@ -200,7 +200,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="image\necphoto.jpg" />
     <Content Include="Models\admin.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>admin.Context.cs</LastGenOutput>
