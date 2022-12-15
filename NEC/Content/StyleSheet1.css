@@ -1,9 +1,13 @@
-.table {
+﻿.table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     margin: 30px 0;
-    color:black;
+    color: black;
+}
+
+.table {
+    color: green;
 }
  .table{
      color:brown;
@@ -17,7 +21,7 @@
 }
 
 .jai {
-    padding-top:2em;
+    padding-top: 2em;
     text-align: center;
 }
 
