@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TACV_DBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Event" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="SSCcriteria" Type="float" Nullable="false" />
+    <Property Name="HSCcriteria" Type="float" Nullable="false" />
+    <Property Name="CGPA" Type="float" Nullable="false" />
+    <Property Name="Website" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TACV_DB.dbo.AdminUserTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AdminUserTable">
+    <Key>
+      <PropertyRef Name="AdminUser" />
+      <PropertyRef Name="AdminPassword" />
+    </Key>
+    <Property Name="AdminUser" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="AdminPassword" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudentDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Rollno" Type="int" Nullable="false" />
+    <Property Name="Semester" Type="int" Nullable="false" />
+    <Property Name="SSC" Type="float" Nullable="false" />
+    <Property Name="HSC" Type="float" Nullable="false" />
+    <Property Name="CGPA" Type="float" Nullable="false" />
+    <Property Name="Backlogs" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="bigint" Nullable="false" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Photo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Resume" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersTbl">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Passcode" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="TACV_DBModel1StoreContainer">
+    <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentDetails" EntityType="Self.StudentDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsersTbl" EntityType="Self.UsersTbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdminUserTable" EntityType="Self.AdminUserTable" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AdminUserTable].[AdminUser] AS [AdminUser], 
+    [AdminUserTable].[AdminPassword] AS [AdminPassword]
+    FROM [dbo].[AdminUserTable] AS [AdminUserTable]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

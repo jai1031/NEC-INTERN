@@ -5,7 +5,7 @@
 }
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link href="@Url.Content("~/Content/css.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css1.css")" rel="stylesheet" />
 </head>
 
 
@@ -33,26 +33,26 @@
 <table class="table">
     <tr>
         <th>
-            ntre
-            @Html.DisplayNameFor(model => model.company_name)
+           
+            @Html.DisplayNameFor(model => model.CompanyName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.@event)
+            @Html.DisplayNameFor(model => model.Event)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.date)
+            @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.C10th_criteria)
+            @Html.DisplayNameFor(model => model.SSCcriteria)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.C12th_criteria)
+            @Html.DisplayNameFor(model => model.HSCcriteria)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CPGA)
+            @Html.DisplayNameFor(model => model.CGPA)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.website)
+            @Html.DisplayNameFor(model => model.Website)
         </th>
         <th></th>
     </tr>
@@ -61,30 +61,30 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.company_name)
+                @Html.DisplayFor(modelItem => item.CompanyName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.@event)
+                @Html.DisplayFor(modelItem => item.Event)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.date)
+                @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.C10th_criteria)
+                @Html.DisplayFor(modelItem => item.SSCcriteria)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.C12th_criteria)
+                @Html.DisplayFor(modelItem => item.HSCcriteria)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CPGA)
+                @Html.DisplayFor(modelItem => item.CGPA)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.website)
+                @Html.DisplayFor(modelItem => item.Website)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
 
-                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
     }

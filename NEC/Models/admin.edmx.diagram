@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ac35e8d6be9b4dddba5e3d9ef5809e67" Name="Diagram1">
-        <EntityTypeShape EntityType="jaics1Model.admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="74a6080e32d24bf2873ad4d87bc5e55e" Name="Diagram1">
+        <EntityTypeShape EntityType="TACV_DBModel.admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -12,16 +12,39 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="color">
+    <div class="header-top snipcss-5WY7W">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
-                  
-                </button>
-                @Html.ActionLink("Admin", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="row">
+                <div class="col-md-4">
+                    <ul>
+                        <li class="phone-text">
+                            <a href="tel:93859 76674">
+                                93859 76674
+                            </a>
+                        </li>
+                        <li class="email-text">
+                            <a href="mailto:principal@nec.edu.in">
+                                principal@nec.edu.in
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8 right">
+                    <div class="menu-top-menu-container">
+                        <ul id="menu-top-menu" class="menu-primary clearfix hide-menu-responsive">
+                            <li id="menu-item-1829" class="home">
+                                @Html.ActionLink("Home", "Index", "Home")
+                            </li>
+                            <li id="menu-item-940" class="admin">
+                                @Html.ActionLink("Admin", "AdminLogin", "Home")
+                            </li>
+                            <li id="menu-item-7411" class="student">
+                                @Html.ActionLink("Student", "StudentLogin", "Home")
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>  
         </div>
     </div>
     <div class="container body-content">

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TACV_DBModel1StoreContainer" CdmEntityContainer="TACV_DBEntities1">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="TACV_DBModel1.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="SSCcriteria" ColumnName="SSCcriteria" />
+          <ScalarProperty Name="HSCcriteria" ColumnName="HSCcriteria" />
+          <ScalarProperty Name="CGPA" ColumnName="CGPA" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentDetails">
+      <EntityTypeMapping TypeName="TACV_DBModel1.StudentDetail">
+        <MappingFragment StoreEntitySet="StudentDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Rollno" ColumnName="Rollno" />
+          <ScalarProperty Name="Semester" ColumnName="Semester" />
+          <ScalarProperty Name="SSC" ColumnName="SSC" />
+          <ScalarProperty Name="HSC" ColumnName="HSC" />
+          <ScalarProperty Name="CGPA" ColumnName="CGPA" />
+          <ScalarProperty Name="Backlogs" ColumnName="Backlogs" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Resume" ColumnName="Resume" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersTbls">
+      <EntityTypeMapping TypeName="TACV_DBModel1.UsersTbl">
+        <MappingFragment StoreEntitySet="UsersTbl">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Passcode" ColumnName="Passcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdminUserTables">
+      <EntityTypeMapping TypeName="TACV_DBModel1.AdminUserTable">
+        <MappingFragment StoreEntitySet="AdminUserTable">
+          <ScalarProperty Name="AdminUser" ColumnName="AdminUser" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -10,7 +10,7 @@ namespace NEC.Controllers
 {
     public class adminController : ApiController
     {
-        jaics1Entities db = new jaics1Entities();
+        TACV_DBEntities db = new TACV_DBEntities();
         public string post(admin product)
         {
             db.admins.Add(product);
@@ -28,16 +28,16 @@ namespace NEC.Controllers
         }
         public IHttpActionResult put( admin product)
         {
-            var product_ = db.admins.Where(x => x.id==product.id).FirstOrDefault<admin>();
+            var product_ = db.admins.Where(x => x.Id==product.Id).FirstOrDefault<admin>();
             if (product_ != null)
             {
-                product_.company_name = product.company_name;
-                product_.@event = product.@event;
-                product_.date = product.date;
-                product_.C10th_criteria = product.C10th_criteria;
-                product_.C12th_criteria = product.C12th_criteria;
-                product_.CPGA = product.CPGA;
-                product_.website = product.website;
+                product_.CompanyName = product.CompanyName;
+                product_.Event = product.Event;
+                product_.Date = product.Date;
+                product_.SSCcriteria = product.SSCcriteria;
+                product_.HSCcriteria = product.HSCcriteria;
+                product_.CGPA = product.CGPA;
+                product_.Website = product.Website;
                 db.SaveChanges();
             }
             else

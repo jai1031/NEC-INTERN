@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TACV_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="StudentDetail">
+    <Key>
+      <PropertyRef Name="RollNo" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RollNo" Type="Int32" Nullable="false" />
+    <Property Name="Semester" Type="Int32" Nullable="false" />
+    <Property Name="SSLC" Type="Double" Nullable="false" />
+    <Property Name="HSC" Type="Double" Nullable="false" />
+    <Property Name="CGPA" Type="Double" Nullable="false" />
+    <Property Name="Backlogs" Type="Boolean" Nullable="false" />
+    <Property Name="Phonenumber" Type="Int32" Nullable="false" />
+    <Property Name="Emailid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersTbl">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Passcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="TACV_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="StudentDetails" EntityType="Self.StudentDetail" />
+    <EntitySet Name="UsersTbls" EntityType="Self.UsersTbl" />
+  </EntityContainer>
+</Schema>

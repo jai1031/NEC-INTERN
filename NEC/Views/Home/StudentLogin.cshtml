@@ -1,0 +1,66 @@
+﻿@model NEC.Models.StudentLoginViewModel
+
+@{
+    ViewBag.Title = "StudentLogin";
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link href="@Url.Content("~/Content/style1.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    @using (Html.BeginForm("StudentLogin", "Home", FormMethod.Post))
+    {
+        <div style="height: 400px; width: 500px; top: 80px; background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
+                position: relative;" class="form">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <center>
+                                <br>
+                                <span id="title" style="color: #61b450; font-family: Trebuchet MS; font-size: 28px;
+                                    font-weight: bold;">Student Login</span>
+                            </center>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "textbox txt1" } })
+                            @*<input name="txtuname" type="text" maxlength="32" id="txtuname" class="textbox txt1" placeholder="Username" autocomplete="off" style="font-weight: bold; font-family: inherit; height: 20px;
+                                width: 150px; text-indent: 12px; font-size: medium; font-weight: bold; height: 26px;
+                                width: 316px;" pwa2-uuid="EDITOR/input-DB3-F15-83182-E0C" pwa-fake-editor="">*@
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "textbox txt1" } })
+                            @*<input name="txtpassword" type="password" maxlength="8" id="txtpassword" class="textbox txt2" placeholder="Password" autocomplete="off" style="font-family: inherit; font-size: medium;
+                                font-weight: bold; height: 26px; text-indent: 12px; width: 316px;">*@
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="submit" name="Button1" value="Login" id="Button1" style="background-color: #61b450; font-family: inherit; color: White; font-weight: bold;
+                                border: 0 none; border-radius: 7px; font-size: 16px; font-weight: bold; cursor: pointer;
+                                height: 45px; margin-top: 17px; width: 356px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
+                                <span id="lblerror" style="font-weight: bold; height: 20px; width: 150px;
+                                    color: Red; font-size: small; font-weight: bold; height: 47px; width: 316px;"></span>
+                            </center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    }
+</body>

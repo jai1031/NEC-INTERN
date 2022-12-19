@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TACV_DBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TACV_DB.dbo.AdminUserTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AdminUserTable">
+    <Key>
+      <PropertyRef Name="AdminUser" />
+      <PropertyRef Name="AdminPassword" />
+    </Key>
+    <Property Name="AdminUser" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="AdminPassword" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TACV_DBModel1StoreContainer">
+    <EntitySet Name="AdminUserTable" EntityType="Self.AdminUserTable" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AdminUserTable].[AdminUser] AS [AdminUser], 
+    [AdminUserTable].[AdminPassword] AS [AdminPassword]
+    FROM [dbo].[AdminUserTable] AS [AdminUserTable]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

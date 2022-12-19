@@ -4,41 +4,42 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="jaics1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="TACV_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="admin">
           <Key>
-            <PropertyRef Name="id" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="company_name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="event" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="date" Type="date" Nullable="false" />
-          <Property Name="10th_criteria" Type="float" Nullable="false" />
-          <Property Name="12th_criteria" Type="float" Nullable="false" />
-          <Property Name="CPGA" Type="float" Nullable="false" />
-          <Property Name="website" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Event" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="SSCcriteria" Type="float" Nullable="false" />
+          <Property Name="HSCcriteria" Type="float" Nullable="false" />
+          <Property Name="CGPA" Type="float" Nullable="false" />
+          <Property Name="Website" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="jaics1ModelStoreContainer">
+        <EntityContainer Name="TACV_DBModelStoreContainer">
           <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="jaics1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="TACV_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="admin">
           <Key>
-            <PropertyRef Name="id" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="company_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="event" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="C10th_criteria" Type="Double" Nullable="false" />
-          <Property Name="C12th_criteria" Type="Double" Nullable="false" />
-          <Property Name="CPGA" Type="Double" Nullable="false" />
-          <Property Name="website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Event" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SSCcriteria" Type="Double" Nullable="false" />
+          <Property Name="HSCcriteria" Type="Double" Nullable="false" />
+          <Property Name="CGPA" Type="Double" Nullable="false" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="jaics1Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TACV_DBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="admins" EntityType="Self.admin" />
         </EntityContainer>
       </Schema>
@@ -46,18 +47,18 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="jaics1ModelStoreContainer" CdmEntityContainer="jaics1Entities">
+        <EntityContainerMapping StorageEntityContainer="TACV_DBModelStoreContainer" CdmEntityContainer="TACV_DBEntities">
           <EntitySetMapping Name="admins">
-            <EntityTypeMapping TypeName="jaics1Model.admin">
+            <EntityTypeMapping TypeName="TACV_DBModel.admin">
               <MappingFragment StoreEntitySet="admin">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="company_name" ColumnName="company_name" />
-                <ScalarProperty Name="event" ColumnName="event" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="C10th_criteria" ColumnName="10th_criteria" />
-                <ScalarProperty Name="C12th_criteria" ColumnName="12th_criteria" />
-                <ScalarProperty Name="CPGA" ColumnName="CPGA" />
-                <ScalarProperty Name="website" ColumnName="website" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="SSCcriteria" ColumnName="SSCcriteria" />
+                <ScalarProperty Name="HSCcriteria" ColumnName="HSCcriteria" />
+                <ScalarProperty Name="CGPA" ColumnName="CGPA" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="jaics1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="TACV_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="admin">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="Id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
-    <Property Name="company_name" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="event" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="date" Type="date" Nullable="false" />
-    <Property Name="10th_criteria" Type="float" Nullable="false" />
-    <Property Name="12th_criteria" Type="float" Nullable="false" />
-    <Property Name="CPGA" Type="float" Nullable="false" />
-    <Property Name="website" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Event" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="SSCcriteria" Type="float" Nullable="false" />
+    <Property Name="HSCcriteria" Type="float" Nullable="false" />
+    <Property Name="CGPA" Type="float" Nullable="false" />
+    <Property Name="Website" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="jaics1ModelStoreContainer">
+  <EntityContainer Name="TACV_DBModelStoreContainer">
     <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -1,0 +1,93 @@
+﻿body {
+}
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 30px 0;
+    color: green;
+}
+
+.color {
+    background-color: orange;
+}
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 30px 0;
+    color: green;
+}
+
+.color {
+    background-color: orange;
+}
+
+.table {
+    color: green;
+}
+
+.h {
+    width: 100%;
+    height: 30px;
+    background-color: deepskyblue;
+}
+
+.jai1 {
+    color: deepskyblue;
+    position: absolute;
+    top: 13%;
+    left: 23%;
+}
+
+.jai {
+    padding-top: 1em;
+    text-align: left;
+}
+
+.jai2{
+    position:absolute;
+    right:25%;
+    top:13%;
+    color:red;
+}
+.email-text{
+    position:absolute;
+    right:15%;
+    top:5%;
+
+}
+.admin{
+    position:absolute;
+    right:20%;
+    top:5%;
+}
+.student {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    
+}
+.home{
+    position:absolute;
+    right:0%;
+}
+body {
+    margin: 0;
+    font-family: Roboto,sans-serif;
+    font-weight: 200;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background: #fff;
+    font-size: 1.5rem;
+    font-style: normal;
+} 
+.header-top {
+    background: #e67a0b;
+    font-size: 17px;
+    font-weight: 400;
+}
+.ul {
+    list-style-type: none;
+}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TACV_DBModel1StoreContainer" CdmEntityContainer="TACV_DBEntities2">
+    <EntitySetMapping Name="AdminUserTables">
+      <EntityTypeMapping TypeName="TACV_DBModel1.AdminUserTable">
+        <MappingFragment StoreEntitySet="AdminUserTable">
+          <ScalarProperty Name="AdminUser" ColumnName="AdminUser" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

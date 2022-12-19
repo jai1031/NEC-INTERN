@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TACV_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'TACV_DB.dbo.AdminUser' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="AdminUser">
+          <Property Name="UserName" Type="varchar" MaxLength="24" />
+          <Property Name="Password" Type="varchar" MaxLength="24" />
+        </EntityType>-->
+  <EntityType Name="StudentDetails">
+    <Key>
+      <PropertyRef Name="RollNo" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RollNo" Type="int" Nullable="false" />
+    <Property Name="Semester" Type="int" Nullable="false" />
+    <Property Name="SSLC" Type="float" Nullable="false" />
+    <Property Name="HSC" Type="float" Nullable="false" />
+    <Property Name="CGPA" Type="float" Nullable="false" />
+    <Property Name="Backlogs" Type="bit" Nullable="false" />
+    <Property Name="Phonenumber" Type="int" Nullable="false" />
+    <Property Name="Emailid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Photo" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersTbl">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Passcode" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="TACV_DBModelStoreContainer">
+    <EntitySet Name="StudentDetails" EntityType="Self.StudentDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsersTbl" EntityType="Self.UsersTbl" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

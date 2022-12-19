@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="jaics1ModelStoreContainer" CdmEntityContainer="jaics1Entities">
+  <EntityContainerMapping StorageEntityContainer="TACV_DBModelStoreContainer" CdmEntityContainer="TACV_DBEntities">
     <EntitySetMapping Name="admins">
-      <EntityTypeMapping TypeName="jaics1Model.admin">
+      <EntityTypeMapping TypeName="TACV_DBModel.admin">
         <MappingFragment StoreEntitySet="admin">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="company_name" ColumnName="company_name" />
-          <ScalarProperty Name="event" ColumnName="event" />
-          <ScalarProperty Name="date" ColumnName="date" />
-          <ScalarProperty Name="C10th_criteria" ColumnName="10th_criteria" />
-          <ScalarProperty Name="C12th_criteria" ColumnName="12th_criteria" />
-          <ScalarProperty Name="CPGA" ColumnName="CPGA" />
-          <ScalarProperty Name="website" ColumnName="website" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="SSCcriteria" ColumnName="SSCcriteria" />
+          <ScalarProperty Name="HSCcriteria" ColumnName="HSCcriteria" />
+          <ScalarProperty Name="CGPA" ColumnName="CGPA" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

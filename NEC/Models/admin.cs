@@ -11,19 +11,16 @@ namespace NEC.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class admin
     {
-        public int id { get; set; }
-        public string company_name { get; set; }
-        public string @event { get; set; }
-        
-        [DataType(DataType.Date)]
-        public DateTime? date { get; set; }
-        public double C10th_criteria { get; set; }
-        public double C12th_criteria { get; set; }
-        public double CPGA { get; set; }
-        public string website { get; set; }
+        public int Id { get; set; }
+        public string CompanyName { get; set; }
+        public string Event { get; set; }
+        public System.DateTime Date { get; set; }
+        public double SSCcriteria { get; set; }
+        public double HSCcriteria { get; set; }
+        public double CGPA { get; set; }
+        public string Website { get; set; }
     }
 }

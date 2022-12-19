@@ -176,7 +176,7 @@
       <DependentUpon>admin.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\admin.cs">
-      <DependentUpon>admin.tt</DependentUpon>
+      <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\admin.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -188,6 +188,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>admin.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdminLoginModel.cs" />
+    <Compile Include="Models\AdminUserTable.cs">
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentDetail.cs">
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentLoginViewModel.cs" />
+    <Compile Include="Models\UserModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsersTbl.cs">
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -196,19 +222,31 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css.css" />
+    <Content Include="Content\css1.css" />
+    <Content Include="Content\stylesheet.css" />
+    <Content Include="Content\stylesheet1.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Models\admin.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>admin.Context.cs</LastGenOutput>
       <DependentUpon>admin.edmx</DependentUpon>
+      <LastGenOutput>admin.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\admin.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>admin.edmx</DependentUpon>
       <LastGenOutput>admin1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\UserModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserModel.edmx</DependentUpon>
+      <LastGenOutput>UserModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\UserModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserModel.edmx</DependentUpon>
+      <LastGenOutput>UserModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -238,6 +276,13 @@
     <Content Include="Models\admin.edmx.diagram">
       <DependentUpon>admin.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\UserModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UserModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\UserModel.edmx.diagram">
+      <DependentUpon>UserModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -261,6 +306,9 @@
     <Content Include="Views\mvc\Index.cshtml" />
     <Content Include="Views\mvc\edit.cshtml" />
     <Content Include="Views\mvc\create.cshtml" />
+    <Content Include="Views\Home\AdminLogin.cshtml" />
+    <Content Include="Views\Home\StudentLogin.cshtml" />
+    <Content Include="Views\Home\UpdateProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
